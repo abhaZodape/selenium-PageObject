@@ -67,8 +67,7 @@ public class AppTest extends TestCase {
 			System.out.println("The actual text" + textFromUI + "expected text"
 					+ "Opening times");
 		} catch (Exception e) {
-			System.out.println("The actual text" + textFromUI
-					+ "not equal to expected text" + "Opening times");
+			System.out.println("Element not found");
 
 		}
 
