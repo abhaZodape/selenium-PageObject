@@ -15,10 +15,6 @@ public class functionLibrary {
          * To maximize the browser.
 	 * @param driver
 	 */
- 
-	/**
-	 * @param driver is the firefox driver
-	 */
 	public static void maximizeWindow(WebDriver driver){
 		
 		driver.manage().window().maximize();
