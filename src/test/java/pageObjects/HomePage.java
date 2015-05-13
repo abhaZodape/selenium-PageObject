@@ -5,10 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+/**
+ * @author abhazodape.
+ * @Description: Webelements of home page.
+ */
 public class HomePage {
 	
 	private static WebElement element = null;
-	private static List<WebElement> AllData = null;
+	private static List<WebElement> lsAllData = null;
 	
 	public static WebElement link_Help(WebDriver driver){
 		element = driver.findElement(By.xpath("//*[@id='pn5']/a/dl/dt"));
@@ -47,8 +51,8 @@ public class HomePage {
 	}
 	
 	public static List<WebElement> getSubMenu(WebDriver driver){
-		AllData = driver.findElements(By.xpath("//*[@id='pn5']/ul/li"));
-		return AllData;
+		lsAllData = driver.findElements(By.xpath("//*[@id='pn5']/ul/li"));
+		return lsAllData;
 	}
          
        
