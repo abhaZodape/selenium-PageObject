@@ -18,8 +18,10 @@ import junit.framework.TestCase;
 /**
  * Unit test for simple App.
  */
+
 public class AppTest extends TestCase {
 	private static WebDriver driver;
+
 	private static final String BASE_URL = "https://www.o2.co.uk/";
 	private static String textFromUI;
 
@@ -46,6 +48,7 @@ public class AppTest extends TestCase {
 
 		HomePage.link_Help(driver).click();
 		Iterator<WebElement> itr = HomePage.getSubMenu(driver).iterator();
+
 		while (itr.hasNext()) {
 
 			System.out.println(itr.next().getText());
@@ -66,6 +69,7 @@ public class AppTest extends TestCase {
 		} catch (Exception e) {
 			System.out.println("The actual text" + textFromUI
 					+ "not equal to expected text" + "Opening times");
+
 		}
 
 	}
