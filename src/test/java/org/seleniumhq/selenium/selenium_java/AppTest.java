@@ -21,31 +21,7 @@ import junit.framework.TestCase;
 public class AppTest 
     extends TestCase
 {
-   /* *//**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     *//*
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    *//**
-     * @return the suite of tests being tested
-     *//*
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    *//**
-     * Rigourous Test :-)
-     *//*
-    public void testApp()
-    {
-        assertTrue( true );
-    }*/
+ 
     
     private static WebDriver driver;
 	private static final String BASE_URL = "https://www.o2.co.uk/";
@@ -60,6 +36,9 @@ public class AppTest
 		
 	}
 	
+	/**
+	 * Test for checking the navigation and text present as open times
+	 */
 	@Test
 	public void testApp1() {
 		driver = new FirefoxDriver();
@@ -70,7 +49,6 @@ public class AppTest
 		HomePage.link_Help(driver).click();
 		Iterator<WebElement> itr = HomePage.getSubMenu(driver).iterator();
 		while(itr.hasNext()){
-			System.out.println(itr.next().getAttribute("href"));
 			System.out.println(itr.next().getText());
 		}
 		
@@ -87,7 +65,7 @@ public class AppTest
 			Assert.assertEquals(textFromUI, "Opening times");
 			System.out.println("The actual text"+textFromUI+"expected text"+"Opening times");
 		}catch(Exception e){
-			System.out.println("The actual text"+textFromUI+"not equal to expected text"+"Opening times");
+			System.out.println("element not found");
 		}
 		
 	}
